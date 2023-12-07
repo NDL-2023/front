@@ -1,0 +1,10 @@
+<div class="card flex-col left middle">
+  <h2>{{ card.type }}{{ card.type === cardType.QUESTION ? '?' : '.' }}</h2>
+  <p>{{ card.content }}</p>
+  <div
+    *ngIf="card.type === cardType.QUESTION"
+    class="flex-row middle center w-100">
+    <button class="danger">Nope</button>
+    <button class="success">Yep</button>
+  </div>
+</div>
