@@ -1,0 +1,11 @@
+<div class="main-container flex-col center middle">
+  <div class="content flex-col center middle w-100">
+    <app-search-bar (search)="handleSearch($event)"></app-search-bar>
+    <div class="cards flex-col center top">
+      <app-card [card]="card_example"></app-card>
+      <app-card [card]="card_question_example"></app-card>
+      <app-card [card]="card_forum_example"></app-card>
+    </div>
+  </div>
+  <app-background-animated></app-background-animated>
+</div>

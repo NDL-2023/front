@@ -1,0 +1,21 @@
+@import '/src/app/styles/variables.scss';
+
+.card {
+  background-color: white;
+  width: calc(100% - 2rem);
+  max-width: 400px;
+  border-radius: $radius;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+h2 {
+  font-family: 'Gasoek One', sans-serif;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+p {
+  width: 100%;
+  font-size: 1.2rem;
+}

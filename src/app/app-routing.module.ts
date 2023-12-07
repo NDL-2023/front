@@ -22,9 +22,9 @@ const routes: Routes = [
       ),
   },
   {
-    path: ROUTES.facts,
+    path: ROUTES.feed,
     loadChildren: () =>
-      import('./modules/facts/facts.module').then(m => m.FactsModule),
+      import('./modules/feed/feed.module').then(m => m.FeedModule),
   },
   {
     path: ROUTES.authentification,
