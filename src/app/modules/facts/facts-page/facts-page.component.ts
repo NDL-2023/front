@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SearchFactsService } from '../services/search-facts.service';
 
 @Component({
   selector: 'app-facts-page',
@@ -6,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./facts-page.component.scss']
 })
 export class FactsPageComponent {
+  #searchFactsService = inject(SearchFactsService);
 
   handleSearch(search: string) {
-    console.log(search);
+    this.#searchFactsService.search(search)
+    .subscribe((list) => {
+      console.log(list);
+    });
   }
 
 }
