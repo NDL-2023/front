@@ -9,5 +9,7 @@
     "core.password": "Password",
     "core.submit": "Submit",
     "core.confirm-password": "Confirm password",
-    "core.password-min-char": "Password must have 8 character minimum"
+    "core.password-min-char": "Password must have 8 character minimum",
+    "user.welcome": "Welcome",
+    "user.logout": "Logout"
 }
