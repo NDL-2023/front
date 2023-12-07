@@ -1,5 +1,8 @@
 {
     "home.home-page-welcome": "Welcome to our page",
     "feed.false-info": "False",
-    "feed.valid-info": "True"
+    "feed.valid-info": "True",
+    "core.profile": "Profile",
+    "core.login": "Login",
+    "core.signup": "Sign Up"
 }

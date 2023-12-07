@@ -1,5 +1,8 @@
 {
     "home.home-page-welcome": "Bienvenue sur notre page",
     "feed.false-info": "Intox",
-    "feed.valid-info": "Info"
+    "feed.valid-info": "Info",
+    "core.profile": "Profil",
+    "core.login": "Connexion",
+    "core.signup": "Inscription"
 }
