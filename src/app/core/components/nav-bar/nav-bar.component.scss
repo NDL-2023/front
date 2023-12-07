@@ -17,18 +17,6 @@ nav {
   background-color: $background;
   padding: 0 1rem;
 
-  .flag-icon {
-    border: none;
-
-    @include width-under(800px) {
-      display: block;
-    }
-    img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
   .nav-icon {
     display: none;
 

@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +15,6 @@ import { TranslocoRootModule } from './transloco-root.module';
     RouterModule,
     SharedModule,
     AppRoutingModule,
-    HttpClientModule,
-    TranslocoRootModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
