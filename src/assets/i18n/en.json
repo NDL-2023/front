@@ -1,3 +1,5 @@
 {
-    "home.home-page-welcome": "Welcome to our page"
+    "home.home-page-welcome": "Welcome to our page",
+    "feed.false-info": "False",
+    "feed.valid-info": "True"
 }
