@@ -3,11 +3,11 @@ import { SearchFactsService } from '../services/search-facts.service';
 import { Card, CardType } from '../../../core/models/api/card/card.model';
 
 @Component({
-  selector: 'app-facts-page',
-  templateUrl: './facts-page.component.html',
-  styleUrls: ['./facts-page.component.scss'],
+  selector: 'app-feed-page',
+  templateUrl: './feed-page.component.html',
+  styleUrls: ['./feed-page.component.scss'],
 })
-export class FactsPageComponent {
+export class FeedPageComponent {
   #searchFactsService = inject(SearchFactsService);
 
   handleSearch(search: string) {
