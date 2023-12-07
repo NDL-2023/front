@@ -6,6 +6,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { CardComponent } from './components/card/card.component';
 import { BackgroundAnimatedComponent } from './components/background-animated/background-animated.component';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,6 @@ import { BackgroundAnimatedComponent } from './components/background-animated/ba
     SearchBarComponent,
     BackgroundAnimatedComponent,
   ],
-  imports: [CommonModule, FeedRoutingModule, SharedModule],
+  imports: [CommonModule, FeedRoutingModule, SharedModule, TranslocoModule],
 })
 export class FeedModule {}

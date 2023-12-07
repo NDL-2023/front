@@ -6,29 +6,29 @@
       formControlName="login"
       class="basic"
       id="login"
-      placeholder="Enter username" />
+      [placeholder]="'core.enter-username' | transloco" />
     <input
       type="password"
       formControlName="password"
       class="basic"
       id="password"
-      placeholder="Password" />
+      [placeholder]="'core.password' | transloco" />
     <input
       type="password"
       formControlName="passwordVerification"
       class="basic"
       id="password"
-      placeholder="Confirm password" />
+      [placeholder]="'core.confirm-password' | transloco" />
     <p *ngIf="errorInForm" class="error-message">{{ errorMessage }}</p>
     <p *ngIf="!errorInForm" class="pwd-info">
-      Password must have 8 character minimum
+      {{'core.password-min-char' | transloco}}
     </p>
     <button
       type="submit"
       (click)="onSubmitForm()"
       class="primary"
       [disabled]="signupForm.invalid">
-      Submit
+      {{ 'core.submit' | transloco }}
     </button>
   </form>
   <img
