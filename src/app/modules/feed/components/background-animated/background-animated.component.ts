@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./background-animated.component.scss']
 })
 export class BackgroundAnimatedComponent {
-
+  
 }
