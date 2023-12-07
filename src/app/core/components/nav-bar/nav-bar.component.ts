@@ -17,6 +17,10 @@ export class NavBarComponent extends BaseAppComponent {
     super();
   }
 
+  get currentFlagIcon() {
+    return `assets/icons/${this.currentLocale}.svg`;
+  }
+
   switchLanguage() {
     this.currentLocale = this.currentLocale == 'fr' ? 'en' : 'fr';
     this.translocoService.setActiveLang(this.currentLocale);
