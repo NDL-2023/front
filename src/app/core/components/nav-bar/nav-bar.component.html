@@ -10,6 +10,11 @@
   <div
     class="flex-row menu middle content"
     [ngClass]="{ active: phoneMenuOpen }">
+    
+    <button class="flag-icon flex center" (click)="switchLanguage()">
+      <img class="flag-icon" [src]="currentFlagIcon"/>
+    </button>
+    
     <a
       (click)="phoneMenuOpen = false"
       routerLink="/feed"
