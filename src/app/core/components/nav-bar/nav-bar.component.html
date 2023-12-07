@@ -12,6 +12,12 @@
     [ngClass]="{ active: phoneMenuOpen }">
     <a
       (click)="phoneMenuOpen = false"
+      routerLink="/facts"
+      routerLinkActive="active"
+      >Facts</a
+    >
+    <a
+      (click)="phoneMenuOpen = false"
       routerLink="/starter-kit"
       routerLinkActive="active"
       >Starter kit</a

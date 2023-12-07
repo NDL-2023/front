@@ -3,5 +3,6 @@ export const ROUTES = {
   starterKit: 'starter-kit',
   authentification: 'auth',
   user: 'user',
+  facts: 'facts',
   notFound: '404',
 };

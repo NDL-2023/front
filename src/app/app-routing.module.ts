@@ -22,6 +22,11 @@ const routes: Routes = [
       ),
   },
   {
+    path: ROUTES.facts,
+    loadChildren: () =>
+      import('./modules/facts/facts.module').then(m => m.FactsModule),
+  },
+  {
     path: ROUTES.authentification,
     loadChildren: () =>
       import('./modules/authentification/authentification.module').then(
