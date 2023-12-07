@@ -4,5 +4,10 @@
     "feed.valid-info": "Info",
     "core.profile": "Profil",
     "core.login": "Connexion",
-    "core.signup": "Inscription"
+    "core.signup": "Inscription",
+    "core.enter-username": "Entrer nom d'utilisateur",
+    "core.password": "Mot de passe",
+    "core.submit": "Soumettre",
+    "core.confirm-password": "Confirmation du mot de passe",
+    "core.password-min-char": "Le mot de passe doit comporter au moins 8 caractères"
 }

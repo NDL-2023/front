@@ -4,5 +4,10 @@
     "feed.valid-info": "True",
     "core.profile": "Profile",
     "core.login": "Login",
-    "core.signup": "Sign Up"
+    "core.signup": "Sign Up",
+    "core.enter-username": "Enter username",
+    "core.password": "Password",
+    "core.submit": "Submit",
+    "core.confirm-password": "Confirm password",
+    "core.password-min-char": "Password must have 8 character minimum"
 }
