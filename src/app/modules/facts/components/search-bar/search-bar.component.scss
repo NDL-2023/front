@@ -1,0 +1,20 @@
+:host {
+    .input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
+        width: 100%;
+        max-height: 50px;
+        padding: 2px;
+
+        border-radius: 8px;
+
+        .search-input {
+            flex-grow: 2;
+        }
+        .search-button {
+            width: 50px;
+        }
+    }
+}

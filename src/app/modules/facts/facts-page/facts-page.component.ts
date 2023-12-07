@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FactsPageComponent {
 
+  handleSearch(search: string) {
+    console.log(search);
+  }
+
 }
