@@ -1,5 +1,6 @@
-<div class="main-container">
-  <app-search-bar (search)="handleSearch($event)"></app-search-bar>
-  <p>facts page works!</p>
-  <app-card [card]="card_example"></app-card>
+<div class="main-container flex-col center middle">
+  <div class="content flex-col center middle w-100">
+    <app-search-bar (search)="handleSearch($event)"></app-search-bar>
+    <app-card [card]="card_example"></app-card>
+  </div>
 </div>

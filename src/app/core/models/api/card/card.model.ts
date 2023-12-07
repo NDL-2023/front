@@ -1,6 +1,6 @@
 export enum CardType {
   FACT = 'fact',
-  QUESTION = 'intox',
+  QUESTION = 'question',
 }
 
 export interface Card {
