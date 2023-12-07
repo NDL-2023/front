@@ -10,6 +10,7 @@
   <div
     class="flex-row menu middle content"
     [ngClass]="{ active: phoneMenuOpen }">
+    <button class="primary" (click)="switchLanguage()">Language</button>
     <a
       (click)="phoneMenuOpen = false"
       routerLink="/facts"
