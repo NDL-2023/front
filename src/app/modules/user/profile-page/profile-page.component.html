@@ -1,5 +1,5 @@
 <div class="main-container flex-col center middle">
   <h2>{{'user.welcome' | transloco }} {{ login }}</h2>
-  <a class="btn success" routerLink="/user/profile/add-card">{{ 'user.add-card' | transloco }}</a>
+  <a *ngIf="isAdmin" class="btn success" routerLink="/user/profile/add-card">{{ 'user.add-card' | transloco }}</a>
   <button class="danger" (click)="logout()">{{ 'user.logout' | transloco}}</button>
 </div>
