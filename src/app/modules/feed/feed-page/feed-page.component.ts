@@ -6,6 +6,7 @@ import { NewTopicModalComponent } from '../components/new-topic-modal/new-topic-
 import { takeUntil } from 'rxjs';
 import { BaseAppComponent } from '../../../core/components/base-app/base-app.component';
 import { translate } from '@ngneat/transloco';
+import { TopicService } from '../services/topic.service';
 
 @Component({
   selector: 'app-feed-page',
@@ -15,7 +16,7 @@ import { translate } from '@ngneat/transloco';
 export class FeedPageComponent extends BaseAppComponent {
   #searchFactsService = inject(SearchFactsService);
   #modalService = inject(ModalService);
-
+  #topicService = inject(TopicService);
   handleSearch(search: string) {
     this.#searchFactsService.search(search).subscribe(list => {
       console.log(list);
@@ -31,7 +32,13 @@ export class FeedPageComponent extends BaseAppComponent {
       })
       .pipe(takeUntil(this.destroy$))
       .subscribe(result => {
-        console.log(result);
+        let topic = {
+          title: result.data.title,
+          content: result.data.content,
+        };
+        this.#topicService.createTopic(topic).subscribe(result => {
+          console.log(result);
+        });
       });
   }
 

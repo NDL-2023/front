@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { Topic } from '../../../core/models/api/topic.model';
+import { Observable, of, take, takeUntil } from 'rxjs';
+import { Topic, TopicDto } from '../../../core/models/api/topic.model';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -45,5 +46,11 @@ export class TopicService {
       ],
     };
     return of(t);
+  }
+
+  createTopic(topic: TopicDto): Observable<Topic> {
+    return this.#http
+      .post<Topic>(environment.API_URL + '/topic', topic)
+      .pipe(take(1));
   }
 }
