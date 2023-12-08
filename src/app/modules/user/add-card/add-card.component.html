@@ -4,13 +4,13 @@
 
         <span>{{ 'user.add-card-title' | transloco  }}</span>
         <div class="flex gap-1" formGroupName="title">
-            <input class="basic" placeholder="title en" formControlName="en"/>
-            <input class="basic" placeholder="title fr" formControlName="fr"/>
+            <textarea class="basic" placeholder="title en" formControlName="en"></textarea>
+            <textarea class="basic" type="textarea" placeholder="title fr" formControlName="fr"></textarea>
         </div>
         <span>{{ 'user.add-card-content' | transloco  }}</span>
         <div class="flex gap-1" formGroupName="content">
-            <input class="basic" placeholder="content en" formControlName="en"/>
-            <input class="basic" placeholder="content fr" formControlName="fr"/>
+            <textarea class="basic" type="textarea" placeholder="content en" formControlName="en"></textarea>
+            <textarea class="basic" type="textarea" placeholder="content fr" formControlName="fr"></textarea>
         </div>
         <select class="basic" placeholder="Type" formControlName="type" >
             <option selected value="fact">Fact</option>
@@ -22,8 +22,8 @@
                 <input class="basic" formControlName="isTrue" type="checkbox"/>
             </div>
             <div class="flex gap-1" formGroupName="explanation">
-                <input class="basic" placeholder="explanation en" formControlName="en"/>
-                <input class="basic" placeholder="explanation fr" formControlName="fr"/>
+                <textarea class="basic" type="textarea" placeholder="explanation en" formControlName="en"></textarea>
+                <textarea class="basic" type="textarea" placeholder="explanation fr" formControlName="fr"></textarea>
             </div>
         </div>
         <button class="btn primary" type="submit">{{ 'core.submit' | transloco }}</button>

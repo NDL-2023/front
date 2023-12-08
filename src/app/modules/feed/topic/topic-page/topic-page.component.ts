@@ -13,6 +13,7 @@ import { takeUntil } from 'rxjs';
 export class TopicPageComponent extends BaseAppComponent implements OnInit {
   topicId!: number;
   topic!: Topic;
+  reply: string = '';
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,
@@ -26,8 +27,17 @@ export class TopicPageComponent extends BaseAppComponent implements OnInit {
     this.topicService
       .getTopic(this.topicId)
       .pipe(takeUntil(this.destroy$))
+      .subscribe(res => {
+        this.topic = { ...res.topic, replies: res.reply };
+      });
+  }
+
+  handleNewReply() {
+    this.topicService
+      .replyTopic(this.topicId, this.reply)
+      .pipe(takeUntil(this.destroy$))
       .subscribe(topic => {
-        this.topic = topic;
+        this.reply = '';
       });
   }
 }
