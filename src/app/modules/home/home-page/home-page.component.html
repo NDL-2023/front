@@ -3,6 +3,7 @@
         <a routerLink="/feed" class="primary btn" >{{ 'home.explore' | transloco }}</a>
         <app-hero-banner></app-hero-banner>
     </div>
-
-    <img *ngIf="secret" src="https://vignette.wikia.nocookie.net/diepio/images/0/03/Hadouken.gif/revision/latest?cb=20161003100603" alt="">
+    <div *ngIf="secret" class="easter-egg-wrapper">
+        <img src="https://vignette.wikia.nocookie.net/diepio/images/0/03/Hadouken.gif/revision/latest?cb=20161003100603" alt="">
+    </div>
 </div>
