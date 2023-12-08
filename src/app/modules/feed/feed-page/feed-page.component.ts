@@ -1,19 +1,38 @@
 import { Component, inject } from '@angular/core';
 import { SearchFactsService } from '../services/search-facts.service';
 import { Card, CardType } from '../../../core/models/api/card/card.model';
+import { ModalService } from '../../../core/services/modal/modal.service';
+import { NewTopicModalComponent } from '../components/new-topic-modal/new-topic-modal.component';
+import { takeUntil } from 'rxjs';
+import { BaseAppComponent } from '../../../core/components/base-app/base-app.component';
+import { translate } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-feed-page',
   templateUrl: './feed-page.component.html',
   styleUrls: ['./feed-page.component.scss'],
 })
-export class FeedPageComponent {
+export class FeedPageComponent extends BaseAppComponent {
   #searchFactsService = inject(SearchFactsService);
+  #modalService = inject(ModalService);
 
   handleSearch(search: string) {
     this.#searchFactsService.search(search).subscribe(list => {
       console.log(list);
     });
+  }
+
+  handleNewTopic() {
+    this.#modalService
+      .open(NewTopicModalComponent, {
+        title: translate('feed.add-topic.modal-title'),
+        cancelText: translate('feed.add-topic.modal-title-cancel'),
+        confirmText: translate('feed.add-topic.modal-title-submit'),
+      })
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(result => {
+        console.log(result);
+      });
   }
 
   card_example: Card = {

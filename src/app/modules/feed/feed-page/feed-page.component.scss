@@ -24,3 +24,15 @@ app-background-animated {
   height: 100vh;
   overflow: hidden;
 }
+.primary {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+
+  img {
+    width: 40px;
+    aspect-ratio: 1/1;
+  }
+}

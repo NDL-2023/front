@@ -15,5 +15,10 @@
   "user.logout": "Logout",
   "topic.comment.placeholder": "Write a comment...",
   "topic.comment.submit": "Submit",
-  "home.explore": "Explore !"
+  "home.explore": "Explore !",
+  "feed.add-topic.title": "Topic title",
+  "feed.add-topic.content": "Topic content",
+  "feed.add-topic.modal-title": "Create a new topic",
+  "feed.add-topic.modal-title-cancel": "Cancel",
+  "feed.add-topic.modal-title-submit": "Submit"
 }

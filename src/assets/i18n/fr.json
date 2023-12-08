@@ -15,5 +15,10 @@
   "user.logout": "Déconnexion",
   "topic.comment.placeholder": "Ajouter un commentaire...",
   "topic.comment.submit": "Envoyer",
-  "home.explore": "Explorer !"
+  "home.explore": "Explorer !",
+  "feed.add-topic.title": "Ajouter un topic",
+  "feed.add-topic.content": "Contenu",
+  "feed.add-topic.modal-title": "Créer un topic",
+  "feed.add-topic.modal-title-cancel": "Annuler",
+  "feed.add-topic.modal-title-submit": "Envoyer"
 }
