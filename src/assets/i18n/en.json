@@ -14,5 +14,6 @@
   "user.welcome": "Welcome",
   "user.logout": "Logout",
   "topic.comment.placeholder": "Write a comment...",
-  "topic.comment.submit": "Submit"
+  "topic.comment.submit": "Submit",
+  "home.explore": "Explore !"
 }
