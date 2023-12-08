@@ -1,0 +1,51 @@
+@import '/src/app/styles/variables.scss';
+
+.main-container {
+  gap: 200px;
+  overflow-x: hidden;
+}
+
+.main-message {
+  img {
+    width: 50%;
+    max-width: 80px;
+    aspect-ratio: 1/1;
+  }
+  p {
+    border-radius: $radius;
+    background-color: white;
+    padding: 1rem;
+  }
+}
+.comments {
+  position: relative;
+  .wrapper {
+    background-color: white;
+    border-radius: $radius;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    max-width: 1000px;
+  }
+  .reply {
+    border-bottom: 1px solid $text2;
+    padding-bottom: 1rem;
+    width: 100%;
+    img {
+      width: 50%;
+      max-width: 50px;
+      aspect-ratio: 1/1;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+app-svg-forest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-65%);
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+}
