@@ -1,0 +1,26 @@
+<div class="main-container">
+    <a class="btn basic return-button" routerLink="/user/profile">{{ 'core.return' | transloco }}</a>
+    <form class="flex-col center" [formGroup]="card" (submit)="submit()">
+
+        <span>{{ 'user.add-card-title' | transloco  }}</span>
+        <div class="flex gap-1" formGroupName="title">
+            <input class="basic" placeholder="title en" formControlName="en"/>
+            <input class="basic" placeholder="title fr" formControlName="fr"/>
+        </div>
+        <span>{{ 'user.add-card-content' | transloco  }}</span>
+        <div class="flex gap-1" formGroupName="content">
+            <input class="basic" placeholder="content en" formControlName="en"/>
+            <input class="basic" placeholder="content fr" formControlName="fr"/>
+        </div>
+        <select class="basic" placeholder="Type" formControlName="type" >
+            <option value="fact">Fact</option>
+            <option value="question">Question</option>
+        </select>
+        <input />
+        <div class="flex gap-1">
+            <span>is true</span>
+            <input class="basic" formControlName="isTrue" type="checkbox"/>
+        </div>
+        <button class="btn primary" type="submit">{{ 'core.submit' | transloco }}</button>
+    </form>
+</div>

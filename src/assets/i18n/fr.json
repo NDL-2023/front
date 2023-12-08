@@ -11,5 +11,10 @@
     "core.confirm-password": "Confirmation du mot de passe",
     "core.password-min-char": "Le mot de passe doit comporter au moins 8 caractères",
     "user.welcome": "Bienvenue",
-    "user.logout": "Déconnexion"
+    "user.logout": "Déconnexion",
+    "user.add-card-form-invalid": "Entrées obligatoires non remplies",
+    "user.add-card": "Ajouter une carte",
+    "user.add-card-content": "Contenu de la carte",
+    "user.add-card-title": "Titre de la carte",
+    "core.return": "Retour"
 }
