@@ -12,5 +12,6 @@
   "core.confirm-password": "Confirm password",
   "core.password-min-char": "Password must have 8 character minimum",
   "user.welcome": "Welcome",
-  "user.logout": "Logout"
+  "user.logout": "Logout",
+    "home.explore": "Explore !"
 }

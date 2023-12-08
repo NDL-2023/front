@@ -1,9 +1,13 @@
+@import "src/app/styles/variables.scss";
+
 .hero-container{
     position: relative;
     a {
         position: absolute;
+        text-decoration: none;
         left: 50%;
         top: 50%;
-        transform: scale(2) translate(-50%, -50%);
+        transform: scale(2) translate( 0, -50%);
+        box-shadow: $shadow-strong;
     }
 }

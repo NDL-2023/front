@@ -12,5 +12,6 @@
   "core.confirm-password": "Confirmation du mot de passe",
   "core.password-min-char": "Le mot de passe doit comporter au moins 8 caractères",
   "user.welcome": "Bienvenue",
-  "user.logout": "Déconnexion"
+  "user.logout": "Déconnexion",
+  "home.explore": "Explorer !"
 }
