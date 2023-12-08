@@ -1,6 +1,7 @@
 <div class="flip-card" [ngClass]="{ flipped: flipped }">
   <div class="flip-card-inner card flex-col left btw">
     <h2>{{ card.type }}{{ card.type === cardType.QUESTION ? '?' : '.' }}</h2>
+    <h3>{{ card.title }}</h3>
     <p>{{ card.content }}</p>
     <div
       *ngIf="card.type === cardType.QUESTION"
