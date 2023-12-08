@@ -17,6 +17,18 @@ nav {
   background-color: $background;
   padding: 0 1rem;
 
+  .flag-icon {
+    border: none;
+
+    @include width-under(800px) {
+      display: block;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .nav-icon {
     display: none;
 
@@ -32,6 +44,10 @@ nav {
   .logo {
     img {
       height: calc($nav-height - 1rem);
+    }
+    p {
+      font-size: 1.5rem;
+      font-family: 'Gasoek One', sans-serif;
     }
   }
 

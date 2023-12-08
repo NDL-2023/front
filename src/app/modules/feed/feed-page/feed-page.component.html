@@ -1,0 +1,12 @@
+<div class="main-container flex-col center middle">
+  <div class="content flex-col center middle w-100">
+    <app-search-bar (search)="handleSearch($event)"></app-search-bar>
+    <div #cardSCroll class="cards flex-col center top">
+      <app-card *ngFor="let card of cards" [card]="card"></app-card>
+    </div>
+  </div>
+  <button class="primary flex-col middle center" (click)="handleNewTopic()">
+    <img src="assets/icons/add.svg" alt="" />
+  </button>
+  <app-background-animated></app-background-animated>
+</div>

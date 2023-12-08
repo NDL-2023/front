@@ -1,0 +1,31 @@
+<div class="flip-card" [ngClass]="{ flipped: flipped }">
+  <div class="flip-card-inner card flex-col left btw">
+    <h2>{{ card.type }}{{ card.type === cardType.QUESTION ? '?' : '.' }}</h2>
+    <h3>{{ card.title }}</h3>
+    <p>{{ card.content }}</p>
+    <div
+      *ngIf="card.type === cardType.QUESTION"
+      class="flex-row middle center w-100">
+      <button (click)="flipped = true" class="danger">
+        {{ 'feed.false-info' | transloco }}
+      </button>
+      <button (click)="flipped = true" class="success">
+        {{ 'feed.valid-info' | transloco }}
+      </button>
+    </div>
+    <div
+      *ngIf="card.type === cardType.TOPIC"
+      class="flex-row middle center w-100">
+      <a [routerLink]="'./topic/' + card.id" class="btn primary">{{
+        'feed.details' | transloco
+      }}</a>
+    </div>
+    <div class="flip-card-back card flex-col left btw" [ngClass]="{'flip-card-true': card.isTrue, 'flip-card-false': !card.isTrue}">
+      <h2>{{ card.type }}{{ card.type === cardType.QUESTION ? '?' : '.' }}</h2>
+      <p>{{ card.explanation }}</p>
+      <div class="w-100 flex-row center middle">
+        <button class="primary" (click)="flipped = false">Ok !</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<app-modal
+  [options]="options"
+  [validator]="title !== '' && content !== ''"
+  (closeEvent)="handleClose($event)">
+  <!-- custom info -->
+  <div class="w-100 flex-col center middle">
+    <input
+      type="text"
+      class="basic w-100"
+      [placeholder]="'feed.add-topic.title' | transloco"
+      [(ngModel)]="title" />
+    <textarea
+      class="basic"
+      [(ngModel)]="content"
+      [placeholder]="'feed.add-topic.content' | transloco"></textarea>
+  </div>
+</app-modal>

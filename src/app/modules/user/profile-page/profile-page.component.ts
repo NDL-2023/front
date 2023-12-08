@@ -13,6 +13,7 @@ import { ROUTES } from '../../../core/constants/routes';
 })
 export class ProfilePageComponent extends BaseAppComponent implements OnInit {
   login = '';
+  isAdmin = false;
 
   constructor(
     private readonly userService: UserService,
@@ -28,6 +29,7 @@ export class ProfilePageComponent extends BaseAppComponent implements OnInit {
       .pipe(takeUntil(this.destroy$))
       .subscribe(payload => {
         this.login = payload.login;
+        this.isAdmin = payload.isAdmin;
       });
   }
 

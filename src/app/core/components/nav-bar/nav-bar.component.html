@@ -1,8 +1,12 @@
 <nav class="flex-row btw middle">
   <!-- Logo -->
   <div>
-    <a routerLink="/home" class="logo" (click)="phoneMenuOpen = false">
+    <a
+      routerLink="/home"
+      class="logo flex-row middle center"
+      (click)="phoneMenuOpen = false">
       <img src="assets/icons/logo.svg" alt="logo" />
+      <p>Bonne question</p>
     </a>
   </div>
 
@@ -10,24 +14,22 @@
   <div
     class="flex-row menu middle content"
     [ngClass]="{ active: phoneMenuOpen }">
+    <button class="flag-icon flex center" (click)="switchLanguage()">
+      <img class="flag-icon" [src]="currentFlagIcon" />
+    </button>
+
     <a
       (click)="phoneMenuOpen = false"
-      routerLink="/facts"
+      routerLink="/feed"
       routerLinkActive="active"
-      >Facts</a
-    >
-    <a
-      (click)="phoneMenuOpen = false"
-      routerLink="/starter-kit"
-      routerLinkActive="active"
-      >Starter kit</a
+      >Feed</a
     >
     <a
       *ngIf="!authService.connected"
       (click)="phoneMenuOpen = false"
       routerLink="auth/login"
       routerLinkActive="active"
-      >Login</a
+      >{{ 'core.login' | transloco }}</a
     >
     <a
       *ngIf="!authService.connected"
@@ -35,14 +37,14 @@
       routerLink="auth/register"
       routerLinkActive="active"
       class="btn primary"
-      >Sign-up</a
+      >{{ 'core.signup' | transloco }}</a
     >
     <a
       *ngIf="authService.connected"
       (click)="phoneMenuOpen = false"
       routerLink="user/profile"
       routerLinkActive="active"
-      >Profil</a
+      >{{ 'core.profile' | transloco }}</a
     >
   </div>
   <div class="menu nav-icon">
