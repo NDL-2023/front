@@ -27,9 +27,12 @@ export class AddCardComponent {
       fr: ['', Validators.required],
       en: ['', Validators.required], 
     }),
-    type: ['', Validators.required],
+    type: ['fact', Validators.required],
     isTrue: [''],
-    explanation: [''],
+    explanation: this.#fb.group({
+      fr: [''],
+      en: [''],
+    })
   });
 
 

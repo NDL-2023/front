@@ -13,13 +13,18 @@
             <input class="basic" placeholder="content fr" formControlName="fr"/>
         </div>
         <select class="basic" placeholder="Type" formControlName="type" >
-            <option value="fact">Fact</option>
+            <option selected value="fact">Fact</option>
             <option value="question">Question</option>
         </select>
-        <input />
-        <div class="flex gap-1">
-            <span>is true</span>
-            <input class="basic" formControlName="isTrue" type="checkbox"/>
+        <div *ngIf="card.value.type === 'question'" class="flex-col center">
+            <div class="flex gap-1">
+                <span>is true</span>
+                <input class="basic" formControlName="isTrue" type="checkbox"/>
+            </div>
+            <div class="flex gap-1" formGroupName="explanation">
+                <input class="basic" placeholder="explanation en" formControlName="en"/>
+                <input class="basic" placeholder="explanation fr" formControlName="fr"/>
+            </div>
         </div>
         <button class="btn primary" type="submit">{{ 'core.submit' | transloco }}</button>
     </form>
