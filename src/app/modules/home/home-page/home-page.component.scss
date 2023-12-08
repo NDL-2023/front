@@ -1,4 +1,7 @@
 @import "src/app/styles/variables.scss";
+.main-container {
+    position: relative;
+}
 
 .hero-container{
     position: relative;
@@ -14,4 +17,13 @@
 
 .flex-col{
     overflow: hidden;
+}
+
+.easter-egg-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }

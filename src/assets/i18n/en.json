@@ -20,5 +20,10 @@
   "feed.add-topic.content": "Topic content",
   "feed.add-topic.modal-title": "Create a new topic",
   "feed.add-topic.modal-title-cancel": "Cancel",
-  "feed.add-topic.modal-title-submit": "Submit"
+  "feed.add-topic.modal-title-submit": "Submit",
+  "user.add-card-form-invalid": "Mandatory entries not filled",
+  "user.add-card": "Add a card",
+  "user.add-card-content": "Card content",
+  "user.add-card-title": "Card title",
+  "core.return": "Return"
 }

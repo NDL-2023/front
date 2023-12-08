@@ -20,5 +20,10 @@
   "feed.add-topic.content": "Contenu",
   "feed.add-topic.modal-title": "Créer un topic",
   "feed.add-topic.modal-title-cancel": "Annuler",
-  "feed.add-topic.modal-title-submit": "Envoyer"
+  "feed.add-topic.modal-title-submit": "Envoyer",
+  "user.add-card-form-invalid": "Entrées obligatoires non remplies",
+  "user.add-card": "Ajouter une carte",
+  "user.add-card-content": "Contenu de la carte",
+  "user.add-card-title": "Titre de la carte",
+  "core.return": "Retour"
 }
