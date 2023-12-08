@@ -1,8 +1,12 @@
 <nav class="flex-row btw middle">
   <!-- Logo -->
   <div>
-    <a routerLink="/home" class="logo" (click)="phoneMenuOpen = false">
+    <a
+      routerLink="/home"
+      class="logo flex-row middle center"
+      (click)="phoneMenuOpen = false">
       <img src="assets/icons/logo.svg" alt="logo" />
+      <p>Bonne question</p>
     </a>
   </div>
 
@@ -10,11 +14,10 @@
   <div
     class="flex-row menu middle content"
     [ngClass]="{ active: phoneMenuOpen }">
-    
     <button class="flag-icon flex center" (click)="switchLanguage()">
-      <img class="flag-icon" [src]="currentFlagIcon"/>
+      <img class="flag-icon" [src]="currentFlagIcon" />
     </button>
-    
+
     <a
       (click)="phoneMenuOpen = false"
       routerLink="/feed"
