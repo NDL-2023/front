@@ -1,7 +1,7 @@
 <div class="main-container flex-col center top">
   <div class="main-message flex-row left top">
     <img src="assets/icons/avatar.svg" alt="avatar" />
-    <div class="flex-col left top">
+    <div class="content flex-col left top">
       <h2>{{ topic.title }}</h2>
       <p>{{ topic.content }}</p>
     </div>
@@ -16,5 +16,14 @@
       </div>
     </div>
     <app-svg-forest></app-svg-forest>
+  </div>
+  <div class="new-comment flex-row center middle">
+    <input
+      type="text"
+      class="basic"
+      [placeholder]="'topic.comment.placeholder' | transloco" />
+    <button class="btn primary">
+      {{ 'topic.comment.submit' | transloco }}
+    </button>
   </div>
 </div>
