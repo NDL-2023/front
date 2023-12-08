@@ -1,0 +1,81 @@
+@import '/src/app/styles/variables.scss';
+
+svg {
+  height: auto;
+  width: calc(100% - 1rem);
+  #cloud-1,
+  #cloud-2,
+  #cloud-3,
+  #cloud-4 {
+    opacity: 0;
+  }
+  #cloud-1 {
+    animation: cloud 35s linear infinite;
+  }
+  #cloud-2 {
+    animation: cloud 30s linear infinite;
+  }
+  #cloud-3 {
+    animation: cloud 28s linear infinite;
+  }
+  #cloud-4 {
+    animation: cloud 31s linear infinite;
+  }
+
+  .fill-bg {
+    fill: $background;
+  }
+
+  .tree {
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation: leaf 15s ease-in-out infinite;
+
+    @for $i from 1 through 23 {
+      &.tree-#{$i} {
+        animation-delay: 0.2s * ($i - 2);
+      }
+    }
+  }
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-14%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(34%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+}
+
+@keyframes leaf {
+  0% {
+    transform: skew(0);
+  }
+  35% {
+    transform: skew(-0.03turn, 1deg);
+  }
+  50% {
+    transform: skew(-0.015turn, 1deg);
+  }
+  70% {
+    transform: skew(-0.025turn, 1deg);
+  }
+  100% {
+    transform: skew(0);
+  }
+}
+
+svg {
+  overflow: visible;
+}

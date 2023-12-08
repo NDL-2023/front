@@ -16,5 +16,6 @@
     "user.add-card": "Add a card",
     "user.add-card-content": "Card content",
     "user.add-card-title": "Card title",
-    "core.return": "Return"
+    "core.return": "Return",
+    "home.explore": "Explore !"
 }

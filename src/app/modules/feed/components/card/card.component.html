@@ -5,6 +5,13 @@
     *ngIf="card.type === cardType.QUESTION"
     class="flex-row middle center w-100">
     <button class="danger">{{ 'feed.false-info' | transloco }}</button>
-    <button class="success">{{ 'feed.valid-info' | transloco }} </button>
+    <button class="success">{{ 'feed.valid-info' | transloco }}</button>
+  </div>
+  <div
+    *ngIf="card.type === cardType.TOPIC"
+    class="flex-row middle center w-100">
+    <a [routerLink]="'./topic/' + card.id" class="btn primary">{{
+      'feed.details' | transloco
+    }}</a>
   </div>
 </div>

@@ -16,5 +16,6 @@
     "user.add-card": "Ajouter une carte",
     "user.add-card-content": "Contenu de la carte",
     "user.add-card-title": "Titre de la carte",
-    "core.return": "Retour"
+    "core.return": "Retour",
+    "home.explore": "Explorer !"
 }

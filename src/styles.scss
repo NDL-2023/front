@@ -23,3 +23,11 @@ body {
   min-height: calc(100vh - $nav-height - 2rem);
   padding: 1rem;
 }
+
+.glass {
+  background: hsla(0, 0%, 100%, 0.01);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid hsla(0, 0%, 100%, 0.05);
+}
