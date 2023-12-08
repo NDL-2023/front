@@ -4,16 +4,23 @@ import { Card, CardType } from '../../../core/models/api/card/card.model';
 import { GetInfosService } from '../services/get-infos.service';
 import { TranslocoService } from '@ngneat/transloco';
 import { fromEvent, takeUntil } from 'rxjs';
+import { ModalService } from '../../../core/services/modal/modal.service';
+import { NewTopicModalComponent } from '../components/new-topic-modal/new-topic-modal.component';
+import { BaseAppComponent } from '../../../core/components/base-app/base-app.component';
+import { translate } from '@ngneat/transloco';
+import { TopicService } from '../services/topic.service';
 
 @Component({
   selector: 'app-feed-page',
   templateUrl: './feed-page.component.html',
   styleUrls: ['./feed-page.component.scss'],
 })
-export class FeedPageComponent implements OnInit, AfterViewInit {
+export class FeedPageComponent extends BaseAppComponent implements OnInit, AfterViewInit {
   #searchFactsService = inject(SearchFactsService);
   #getInfosService = inject(GetInfosService);
-  #translocoService = inject(TranslocoService);
+  #translocoService = inject(TranslocoService)
+  #modalService = inject(ModalService);
+  #topicService = inject(TopicService);
 
   handleSearch(search: string) {
     this.#searchFactsService.search(search).subscribe(list => {
@@ -27,7 +34,9 @@ export class FeedPageComponent implements OnInit, AfterViewInit {
   hasReachedBottom = false;
 
   ngOnInit(): void {
-    this.#translocoService.langChanges$.subscribe((lang) => {
+    this.#translocoService.langChanges$
+    .pipe(takeUntil(this.destroy$))
+    .subscribe((lang) => {
       this.currentPage = 1;
       this.cards = [];
       this.getNewPage(this.currentPage, lang);
@@ -59,6 +68,24 @@ export class FeedPageComponent implements OnInit, AfterViewInit {
         this.hasReachedBottom = false;
       }
     });
+  }
+  handleNewTopic() {
+    this.#modalService
+      .open(NewTopicModalComponent, {
+        title: translate('feed.add-topic.modal-title'),
+        cancelText: translate('feed.add-topic.modal-title-cancel'),
+        confirmText: translate('feed.add-topic.modal-title-submit'),
+      })
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(result => {
+        let topic = {
+          title: result.data.title,
+          content: result.data.content,
+        };
+        this.#topicService.createTopic(topic).subscribe(result => {
+          console.log(result);
+        });
+      });
   }
 
 }

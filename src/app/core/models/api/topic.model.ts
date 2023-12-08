@@ -13,3 +13,8 @@ export interface Topic {
   author: User;
   replies: Reply[];
 }
+
+export interface TopicDto {
+  title: string;
+  content: string;
+}

@@ -7,6 +7,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { CardComponent } from './components/card/card.component';
 import { BackgroundAnimatedComponent } from './components/background-animated/background-animated.component';
 import { TranslocoModule } from '@ngneat/transloco';
+import { NewTopicModalComponent } from './components/new-topic-modal/new-topic-modal.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TranslocoModule } from '@ngneat/transloco';
     CardComponent,
     SearchBarComponent,
     BackgroundAnimatedComponent,
+    NewTopicModalComponent,
   ],
   imports: [CommonModule, FeedRoutingModule, SharedModule, TranslocoModule],
 })
