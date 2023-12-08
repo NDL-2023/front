@@ -12,6 +12,7 @@ export class GetInfosService {
   #http = inject(HttpClient);
 
   getInfos(page: number, lang: string): Observable<Card[]> {
+    lang = lang === "fr" ? "fr" : "en";
     return this.#http.get<Card[]>(`${environment.API_URL}/cards/page?page=${page}&lang=${lang}`).pipe(
       map(result => {
         return result;

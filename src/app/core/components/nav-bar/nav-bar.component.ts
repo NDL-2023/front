@@ -10,7 +10,7 @@ import { BaseAppComponent } from '../base-app/base-app.component';
 })
 export class NavBarComponent extends BaseAppComponent {
   ind = 0;
-  availableLangs: string[] = ['fr', 'en', 'sv', 'de'];
+  availableLangs: string[] = ['fr', 'en', 'sv', 'de', 'es', 'zh'];
   currentLocale = this.availableLangs[this.ind];
   //isConnected = false;
   //use AuthentificationService to get the current user
