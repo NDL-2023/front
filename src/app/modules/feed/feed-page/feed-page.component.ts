@@ -54,32 +54,11 @@ export class FeedPageComponent implements OnInit, AfterViewInit {
 
   getNewPage(page: number, lang: string) {
     this.#getInfosService.getInfos(page, lang).subscribe((r) => {
-      this.cards = this.cards.concat(r);
+      if(r.length != 0) {
+        this.cards = this.cards.concat(r);
+        this.hasReachedBottom = false;
+      }
     });
   }
 
-  card_example: Card = {
-    id: 1,
-    title: 'Fact 1',
-    content:
-      'Fact 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae aliquet nisl nunc eu justo.',
-    type: CardType.FACT,
-  };
-  card_question_example: Card = {
-    id: 2,
-    title: 'Question 1',
-    content:
-      'Question 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae aliquet nisl nunc eu justo.',
-    type: CardType.QUESTION,
-    isTrue: true,
-    explanation: 'Question 1 explanation',
-  };
-
-  card_forum_example: Card = {
-    id: 3,
-    title: 'Forum 1',
-    content:
-      'Forum 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies ultricies, nunc nisl aliquam nunc, vitae aliquet nisl nunc eu justo.',
-    type: CardType.TOPIC,
-  };
 }
