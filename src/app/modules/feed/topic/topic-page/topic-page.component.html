@@ -21,8 +21,9 @@
     <input
       type="text"
       class="basic"
+      [(ngModel)]="reply"
       [placeholder]="'topic.comment.placeholder' | transloco" />
-    <button class="btn primary">
+    <button class="btn primary" (click)="handleNewReply()">
       {{ 'topic.comment.submit' | transloco }}
     </button>
   </div>
