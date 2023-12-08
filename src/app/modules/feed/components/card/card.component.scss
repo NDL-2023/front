@@ -61,3 +61,11 @@ p {
   color: $background;
   transform: rotateY(180deg);
 }
+
+.flip-card-false {
+  background-color: $red;
+}
+
+.flip-card-true {
+  background-color: $green;
+}

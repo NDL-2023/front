@@ -19,7 +19,7 @@
         'feed.details' | transloco
       }}</a>
     </div>
-    <div class="flip-card-back card flex-col left btw">
+    <div class="flip-card-back card flex-col left btw" [ngClass]="{'flip-card-true': card.isTrue, 'flip-card-false': !card.isTrue}">
       <h2>{{ card.type }}{{ card.type === cardType.QUESTION ? '?' : '.' }}</h2>
       <p>{{ card.explanation }}</p>
       <div class="w-100 flex-row center middle">
