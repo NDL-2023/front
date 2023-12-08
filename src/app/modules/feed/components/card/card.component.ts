@@ -10,4 +10,5 @@ import { Card, CardType } from '../../../../core/models/api/card/card.model';
 export class CardComponent extends BaseAppComponent {
   @Input() card!: Card;
   cardType = CardType;
+  flipped = false;
 }
